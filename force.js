@@ -53,7 +53,10 @@ var force = (function () {
 
     // Whether or not to use a CORS proxy. Defaults to false if app running in Cordova, in a VF page,
     // or using the Salesforce console. Can be overriden in init()
-        useProxy = (window.cordova || window.SfdcApp || window.sforce) ? false : true;
+        useProxy = (window.cordova || window.SfdcApp || window.sforce) ? false : true,
+        
+    // Login window URL parameters for desktop login window as key-value pairs
+        loginURLParams = {}
 
     /*
      * Determines the request base URL.
@@ -297,7 +300,7 @@ var force = (function () {
         console.log('oauthCallbackURL: ' + oauthCallbackURL);
 
         var loginWindowURL = loginURL + '/services/oauth2/authorize?client_id=' + appId + '&redirect_uri=' +
-            oauthCallbackURL + '&response_type=token';
+            oauthCallbackURL + '&response_type=token' + toQueryString(loginURLParams);
         loginSuccessHandler = successHandler;
         loginErrorHandler = errorHandler;
         window.open(loginWindowURL, '_blank', 'location=no');
