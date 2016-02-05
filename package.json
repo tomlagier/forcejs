@@ -1,0 +1,27 @@
+{
+  "author": {
+    "email": "ccoenraets@gmail.com",
+    "name": "Christophe Coenraets",
+    "url": "http://coenraets.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/tomlagier/forcejs/issues"
+  },
+  "dependencies": {},
+  "description": "Salesforce REST SDK",
+  "homepage": "https://github.com/tomlagier/forcejs#readme",
+  "license": "ISC",
+  "main": "force.js",
+  "maintainers": [
+    {
+      "name": "tomlagier",
+      "email": "tom@tomlagier.com"
+    }
+  ],
+  "name": "forcejs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomlagier/forcejs.git"
+  },
+  "version": "0.7.4"
+}
